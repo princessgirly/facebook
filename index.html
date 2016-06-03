@@ -1,93 +1,166 @@
-<!DOCTYPE html>
-<html lang=fr>
+<!DOCTYPE Html>
+<html lang="fr">
+
 <head>
+  <title>Facebook</title>
+  <!-- Link -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Meta -->
   <meta charset="utf-8">
-  <title>Twitter</title>
-  <link rel="stylesheet" href="style.css" />
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>  
+</head>
 
+<body>
   <header>
-    <div class="left">
-    <img src="data:image/png;base64,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"
-    alt="logo"width="15" height="15"/>&nbsp&nbsp
-    <a href="#">A propos</a>&nbsp&nbsp&nbsp&nbsp
-    <a href="#">Accueil</a>&nbsp&nbsp&nbsp&nbsp
-   </div>
-   <div class="right">
-     <a href="#">Langue : français</a>&nbsp&nbsp&nbsp&nbsp
-     </div>
+    <h1>facebook</h1>
+    <form id="login">
+      <div class="session">
+        <label name="email">Adresse e-mail ou mobile</label>
+        <input type="email" name="email" />
+        <input type="checkbox" name="session" value="sessionYes">
+        <p>Garder ma session active</p>
+      </div>
+      <div class="motPasse">
+        <label name="password">Mot de passe</label>
+        <input type="password" name="password" />
+        <a href="#">Mot de passe oublié ?</a>
+      </div>
+      <div class="button">
+        <input type="submit" name="loginOK" value="connexion" />
+      </div>
+    </form>
   </header>
+  <div class="gauche">
+    <h2>Avec Facebook, partagez et restez en contact avec votre entourage.</h2>
+    <img src="imge.png" />
+
+  </div>
+  <div class="droite">
+    <h2>Inscription</h2>
+    <form id="register">
+      <input type="text" name="prenom" placeholder="Prénom" />
+      <input type="text" name="nom" placeholder="Nom" />
+      <input type="email" name="emailRegister" placeholder="Adresse e-mail ou mobile" />
+      <input type="email" name="emailRegisterConfirme" placeholder="Confirmer l'adresse e-mail ou mobile" />
+      <input type="password" name="password" placeholder="Nouveau mot de passe" />
+      <label name="birth">Date de naissance</label>
+
+      <select name="jour">
+        <option value="Jour">Jour</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <select name="mois">
+        <option value="mois">Mois</option>
+        <option value="1">January</option>
+        <option value="2">Febuary</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <select name="annee">
+        <option value="année">Année</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
+        <option value="2003">2003</option>
+        <option value="2002">2002</option>
+        <option value="2001">2001</option>
+        <option value="2000">2000</option>
+        <option value="1999">1999</option>
+        <option value="1998">1998</option>
+        <option value="1997">1997</option>
+        <option value="1996">1996</option>
+        <option value="1995">1995</option>
+        <option value="1994">1994</option>
+        <option value="1993">1993</option>
+        <option value="1992">1992</option>
+        <option value="1991">1991</option>
+        <option value="1990">1990</option>
+        <option value="1989">1989</option>
+        <option value="1988">1988</option>
+        <option value="1987">1987</option>
+        <option value="1986">1986</option>
+        <option value="1985">1985</option>
+        <option value="1984">1984</option>
+        <option value="1983">1983</option>
+        <option value="1982">1982</option>
+        <option value="1981">1981</option>
+        <option value="1980">1980</option>
+        <option value="1979">1979</option>
+        <option value="1978">1978</option>
+        <option value="1977">1977</option>
+        <option value="1976">1976</option>
+        <option value="1975">1975</option>
+        <option value="1974">1974</option>
+        <option value="1973">1973</option>
+        <option value="1972">1972</option>
+        <option value="1971">1971</option>
+        <option value="1970">1970</option>
+        <option value="1969">1969</option>
+        <option value="1968">1968</option>
+        <option value="1967">1967</option>
+        <option value="1966">1966</option>
+        <option value="1965">1965</option>
+        <option value="1964">1964</option>
+        <option value="1963">1963</option>
+        <option value="1962">1962</option>
+        <option value="1961">1961</option>
+        <option value="1960">1960</option>
+        <option value="1959">1959</option>
+      </select>
+      <a href="#">Pourquoi indiquer ma date de naissance?</a>
+      <input type="radio" name="sex" value="femme" />
+      <p>Femme</p>
+      <input type="radio" name="sex" value="homme" />
+      <p>Homme</p>
+      <p>En cliquant sur Inscription, vous acceptez nos Conditions et indiquez que vous avez lu notre Politique d’utilisation des données, y compris notre Utilisation des cookies.</p>
+      <input type="submit" name="registerOK" value="Inscription" />
 
 
-  <section>
-    <div class="container-left">
-    <h1>Bienvenue sur Twitter.</h1>
-    <p>Connectez-vous à vos amis — et d'autres personnes fascinantes. Recevez des mises à jour instantanées
-      sur les choses qui vous intéressent. Et regardez les événements se dérouler, en temps réel,
-      sous tous les angles..</p>
-      <p>Bienvenue sur Twitter.</p><br><br><br><br><br><br><br>
-      <div class="deco">
-      <a href="#">Last night, The @Libertines at @BSTHydePark:</a><br><br><br>
-    </div>
-      <a href="#">Tweet et photo par @cfaruolo</a><br>
-      <a href="#">4:16 PM - 6 July 2014</a>
-    </div>
+    </form>
+  </div>
 
-    <div class="container-right-top">
-      <fieldset>
-      <form method="post" action="traitement.php">
-      <p>
-          <input type="text" name="pseudo" id="pseudo" placeholder="téléphone, email ou identifiant" size="30" maxlength="15" />
-          <br />
-          <br />
-          <input type="password" name="pass" id="pass" />
-          <br />
-          <input type="radio" name="souhait" value="souvenir" id="souvenir" />
-          <label for="souvenir">Se souvenir de moi</label>
-          <input type="submit" value="Connexion" ></code>
-      </p>
-      </form>
-     </fieldset>
+</body>
 
-    </div>
-    <div class="container-right-bottom">
-      <fieldset>
-      <h2 color="black">Nouveau sur Twitter ?</h2>
-      <h2 color="#66757f"> Inscrivez-vous</h2>
-
-      <input type="text" name="pseudo" id="pseudo" placeholder="Nom complet" size="30" maxlength="15" /><br>
-      <input type="email" name="email" id="email" placeholder="email" size="30" maxlength="15" /><br>
-      <input type="password" name="pass" id="pass" placeholder="mot de passe" size="30" maxlength="15" /><br>
-      <input type="submit" value="S'inscrire sur twitter" background-color="yellow" border-radius="20%" ></code>
-
-</fieldset>
-    </div>
-
-  </section>
-
-  <footer>
-    <div class="lien">
-    <a href="#">A propos</a>&nbsp&nbsp
-    <a href="#">Aide</a>&nbsp&nbsp
-    <a href="#">Blog</a>&nbsp&nbsp
-    <a href="#">État du service</a>&nbsp&nbsp
-    <a href="#">Offres d'emploi</a>&nbsp&nbsp
-    <a href="#">Confidentialité</a>&nbsp&nbsp
-    <a href="#">Cookies</a>&nbsp&nbsp
-    <a href="#">Informations sur la publicité</a>&nbsp&nbsp
-    <a href="#">Marque</a>&nbsp&nbsp
-    <a href="#">Publicité</a>&nbsp&nbsp
-    <a href="#">Professionnels</a>&nbsp&nbsp
-    <a href="#">Médias</a>&nbsp&nbsp
-    <a href="#">Développeurs</a>&nbsp&nbsp
-    <a href="#">Annuaire</a>&nbsp&nbsp
-    <p>© 2016 Twitter</p>
-    </div>
-  </footer>
-
-
-  </body>
-  </html>
+</html>
